@@ -1,0 +1,131 @@
+.home {
+  width: 100%;
+}
+
+.hero_section{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero_section-container{
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home-title{
+  font-size: 50px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding:5px 0;
+
+}
+
+.home-description{
+  font-size: 20px;
+  line-height: 2;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  width: 500px;
+  text-align: justify;
+  padding: 5px 0;
+}
+
+
+.hero_section-container-right img{
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+}
+
+
+.home-templates-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0;
+  padding: 100px ;
+}
+
+.template-header-title {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 10px 50px 50px 50px;
+  text-align: center;
+}
+
+.template-select-text {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.templates-img-cont {
+  width: 100%;
+  position: relative; 
+}
+
+.templates-img-cont:hover {
+  cursor: pointer;
+}
+
+.templates-img-cont:hover .black-screen {
+  visibility: visible;
+}
+
+.template-img {
+  width: 100%;
+  height: 100%;
+}
+
+.MuiButtonBase-root.MuiButton-root.use-template-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  visibility: hidden;
+  text-transform: capitalize;
+}
+
+.templates-img-cont:hover .MuiButtonBase-root.MuiButton-root {
+  visibility: visible;
+}
+.homeInfoWrapper .grid{
+  display: flex;
+  justify-content: center;
+  padding: 50px ;
+  text-align: center;
+  gap: 20px;
+}
+.item3{
+  word-wrap: wrap;
+  position: relative;
+}
+.homeImage{
+  width: 300px;
+  height: 180px;
+}
+@media screen and (max-width: 450px) {
+  .home-templates-cont {
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .home-templates-cont {
+    padding: 20px 55px;
+  }
+}
