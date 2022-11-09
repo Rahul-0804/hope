@@ -7,25 +7,29 @@ import TemplateOneExperienceComponent from "../Components/TemplateOneExperienceC
 import { data } from "../Data/data";
 import TemplateEducationComponent from "../Components/TemplateEducationComponent";
 import TemplateKeySkillComponent from "../Components/TemplateKeySkillComponent";
+import TemplateOneProjectComponent from "../Components/TemplateOneProjectComponent";
 
 const Template1 = (props) => {
-  // console.log(
-  //   props.personalinfo,
-  //   props.workexperience,
-  //   props.educationinfo,
-  //   props.skills
-  // );
+   console.log(
+    props.personalinfo,
+    props.workexperience,
+    props.projects,
+    props.educationinfo,
+    props.skills
+   );
   const personalinfo = props.personalinfo
     ? props.personalinfo
     : data.personal_info;
   const workexperience = props.workexperience
     ? props.workexperience
     : data.work_experience;
+  const proj = props.projects ? props.projects : data.projects;
   const educationinfo = props.educationinfo
     ? props.educationinfo
     : data.education_details;
   const skills = props.skills ? props.skills : data.key_skills;
-  // console.log(props.index);
+
+  console.log(props.index);
   return (
     <Paper
       sx={{
@@ -61,6 +65,17 @@ const Template1 = (props) => {
               <TemplateOneExperienceComponent
                 key={index}
                 experience={experience}
+              />
+            );
+          })}
+        </ul>
+        <TemplateHeading color={"#C98A55"} title={"Personal Projects"} />
+        <ul style={{ paddingBottom: 10 }}>
+          {proj.map((project, index) => {
+            return (
+              <TemplateOneProjectComponent
+                key={index}
+                project={project}
               />
             );
           })}

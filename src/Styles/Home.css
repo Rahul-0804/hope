@@ -46,7 +46,6 @@
 .hero_section-container-right img{
   width: 600px;
   height: 600px;
-  object-fit: cover;
 }
 
 
@@ -57,14 +56,14 @@
   justify-content: center;
   align-items: center;
   margin: 70px 0;
-  padding: 100px ;
+  padding-bottom: 100px;
 }
 
 .template-header-title {
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  margin: 10px 50px 50px 50px;
+  margin: 0px 50px 50px 50px;
   text-align: center;
 }
 
@@ -123,9 +122,35 @@
   .home-templates-cont {
     padding: 15px 30px;
   }
+  .hero_section-container{
+    flex-direction: column;
+    width: 80%;
+  }
 }
 @media screen and (max-width: 900px) {
   .home-templates-cont {
     padding: 20px 55px;
+  }
+  .hero_section-container{
+    flex-direction: column;
+    width: 80%;
+  }
+  .hero_section-container-right img{
+    width: 400px;
+    height: 400px;
+  }
+  .home-title{
+    font-size: 20px;
+  }
+  .home-description{
+    font-size: 15px;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .template-header-title {
+    font-size: 30px;
+    line-break: normal;
+    /* margin: 0px 50px 50px 50px; */
+    text-align: center;
   }
 }

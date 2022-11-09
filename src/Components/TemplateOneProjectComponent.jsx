@@ -8,7 +8,7 @@ const TemplateOneExperienceComponent = (props) => {
         <div className="template-one-project-comp__upper">
             <li>
                 <h3 className="template-one-project-comp_name">{props.project.projectName}</h3>
-                <h4 className = "template-one-project-comp_month">{props.project.projectMonth}-{props.project.projectYear}</h4>
+                <h4 className = "template-one-project-comp_month">{props.project.month}{' '}{props.project.Year}</h4>
             </li>
         </div>
         <div className="template-one-project-comp__lower">

@@ -13,6 +13,7 @@ const mapStateToProps = (state) => ({
   experiences: state.workExperienceReducer.experiences,
   educationInfo: state.educationDetailsReducer.educationInfo,
   skills: state.keySkillsReducer.skills,
+  projects: state.projectReducer.projects,
 });
 
 const mapDispatchToProps = (dispatch) => ({});
@@ -21,16 +22,17 @@ const PreviewComponent = (props) => {
   const [loading, setLoading] = useState(false);
   const [resumeName, setResumeName] = useState("");
   const [error, setError] = useState("");
-  // console.log("props", props)
+  console.log("props", props)
 
   const getTemplate = (template, index) => {
-    // console.log("template.id ",template.id )
+    console.log("template.id ",template.id )
     if (template.id === props.selectedTemplateId) {
       const TemplateComp = React.cloneElement(template.template, {
         personalinfo: props.personalInfo,
         workexperience: props.experiences,
         educationinfo: props.educationInfo,
         skills: props.skills,
+        projects: props.projects,
         index: index,
       });
       return TemplateComp;
@@ -69,6 +71,7 @@ const PreviewComponent = (props) => {
                     id: props.selectedResumeId,
                     personalInfo: props.personalInfo,
                     experiences: props.experiences,
+                    projects: props.projects,
                     educationInfo: props.educationInfo,
                     skills: props.skills,
                   };
@@ -90,6 +93,7 @@ const PreviewComponent = (props) => {
               id: uniqid(),
               personalInfo: props.personalInfo,
               experiences: props.experiences,
+              projects: props.projects,
               educationInfo: props.educationInfo,
               skills: props.skills,
             });
@@ -104,6 +108,7 @@ const PreviewComponent = (props) => {
                   id: uniqid(),
                   personalInfo: props.personalInfo,
                   experiences: props.experiences,
+                  projects: props.projects,
                   educationInfo: props.educationInfo,
                   skills: props.skills,
                 },

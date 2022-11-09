@@ -38,7 +38,7 @@ const Home = (props) => {
           <div className="hero_section-container-left">
             <h1 className="home-title">MyFolio</h1>
             <p className="home-description">Create Your Resume By employing the best practices and innovative tech, MyFolio boosts your chances of landing a better job - completely for free. </p>
-            <Button variant="contained" color="primary" onClick={() => navigate("/template/fill-details")}>Get Started</Button>
+            <Button variant="contained" color="primary" href="#getStarted" >Get Started</Button>
           </div>
           <div className="hero_section-container-right">
             <img src={logo} alt="Resume" />
@@ -49,7 +49,7 @@ const Home = (props) => {
       <>
          <div className="home">
         <div className="home-templates-cont">
-          <h2 className="template-header-title">Choose a Template</h2>
+          <h2 id="getStarted" className="template-header-title">Choose a Template</h2>
           {/* <p className="template-select-text">Select one of the templates to get started</p>
           <p className="template-select-text">There you go..</p> */}
           
